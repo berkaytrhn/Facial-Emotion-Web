@@ -1,0 +1,22 @@
+{
+  "name": "facial-emotion-front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkaytrhn/Facial-Emotion-Front-End.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berkaytrhn/Facial-Emotion-Front-End/issues"
+  },
+  "homepage": "https://github.com/berkaytrhn/Facial-Emotion-Front-End#readme",
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
+}
