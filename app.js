@@ -28,6 +28,14 @@ let main = () => {
 }
 
 
+let put_gif = () => {
+    document.getElementById("");
+}
+
+let remove_gif = () =>{
+
+}
+
 let upload_image = async (endpoint, formData) =>{
     await axios.post(
         endpoint, 
@@ -45,11 +53,12 @@ let upload_image = async (endpoint, formData) =>{
 let handle_response = (response) => {
     console.log(response);
     let pred = response.Predicted;
-    let prob = parseFloat(response.Probability);
-    let x_min = parseInt(response.x_min);
-    let y_min = parseInt(response.y_min);
-    let x_max = parseInt(response.x_max);
-    let y_max = parseInt(response.y_max);
+    document.getElementById("result").innerText = pred;
+    //let prob = parseFloat(response.Probability);
+    //let x_min = parseInt(response.x_min);
+    //let y_min = parseInt(response.y_min);
+    //let x_max = parseInt(response.x_max);
+    //let y_max = parseInt(response.y_max);
 }
 
 

@@ -3,6 +3,10 @@
     max-height: 20%;
 }
 
+body{
+  margin-top: 10%;
+}
+
 #form{
     text-align: center;
     display: block;
@@ -11,6 +15,16 @@
     border: 2px;
     border-color: black;
 }
+
+#result{
+  color: rgb(138, 31, 31);
+  font-weight: bold;
+  padding: 1%;
+  font-size: large;
+  display: block;
+  
+}
+
 img{
   display: block;
   margin: auto;
@@ -27,6 +41,7 @@ img{
 
 h1{
   text-align: center;
+  font-weight: bold;
 }
 
 #fileInput::file-selector-button{
