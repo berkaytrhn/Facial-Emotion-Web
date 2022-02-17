@@ -28,14 +28,6 @@ let main = () => {
 }
 
 
-let put_gif = () => {
-    document.getElementById("");
-}
-
-let remove_gif = () =>{
-
-}
-
 let upload_image = async (endpoint, formData) =>{
     await axios.post(
         endpoint, 
