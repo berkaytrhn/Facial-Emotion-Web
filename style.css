@@ -3,43 +3,60 @@
     max-height: 20%;
 }
 
-#container{
+#form{
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 2px;
+    border-color: black;
+}
+img{
+  display: block;
+  margin: auto;
+  padding: 2%;
 }
 
-button {
-  align-items: center;
-  appearance: button;
-  background-color: #0276FF;
-  border-radius: 8px;
-  border-style: none;
-  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 0;
-  font-family: "RM Neue",sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  padding: 10px 21px;
+#fileInput{
+  display: inline;
+  margin: auto;
+  padding: 1%;
+  overflow: hidden;
+  position: relative;
+}
+
+h1{
   text-align: center;
-  text-transform: none;
-  transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
-button:active {
-  background-color: #006AE8;
+#fileInput::file-selector-button{
+  padding: 4%;
+  border-radius: 4px;
+  border: 0ch;
+  background-color: rgb(60, 60, 175);
+  color: azure;
+  opacity: 0.7;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-button:hover {
-  background-color: #1C84FF;
+#fileInput::file-selector-button:hover{
+  opacity: 1;
+}
+
+button{
+  display: inline;
+  padding: 1%;
+  width: 7%;
+  border-radius: 4px;
+  background-color: rgb(60, 60, 175);
+  color: azure;
+  font-weight: bold;
+  transition: 0.3s;
+  opacity: 0.7;
+  border: 0ch;
+}
+
+button:hover{
+  opacity: 1;
 }
