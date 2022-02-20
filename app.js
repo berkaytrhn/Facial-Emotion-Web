@@ -7,14 +7,17 @@ let main = () => {
         let img = event.target.files[0];
         let image = document.getElementById("image");
         image.src = URL.createObjectURL(img);
+        let result = document.getElementById("result");
+        result.innerHTML="";
     });
 
     form.addEventListener("submit", event => {
         //console.log(inputFile.files);
         if( inputFile.files.length === 0){
-            console.log("Please Choose a file!!");
+            alert("Please Choose a file!!");
             return;
         }
+        set_loading();
         event.preventDefault();
 
         let endpoint = "http://localhost:5000/upload/";
@@ -28,6 +31,21 @@ let main = () => {
 }
 
 
+let set_loading = () => {
+    let gif = document.createElement("img");
+    gif.src="loading.gif";
+    gif.style.maxHeight= "3%";
+    gif.style.maxWidth= "3%";
+
+    console.log(gif);
+    let text = document.createElement("p");
+    text.innerText = "Loading...";
+    console.log(gif.innerHTML);
+    result.appendChild(gif);
+    result.appendChild(text);
+
+}
+
 let upload_image = async (endpoint, formData) =>{
     await axios.post(
         endpoint, 
@@ -38,19 +56,16 @@ let upload_image = async (endpoint, formData) =>{
             }
         }
     ).then(response => {
-        handle_response(response.data);
+        setTimeout(() => {
+            handle_response(response.data);
+        }, 1500);
     });
 }
 
 let handle_response = (response) => {
     console.log(response);
     let pred = response.Predicted;
-    document.getElementById("result").innerText = pred;
-    //let prob = parseFloat(response.Probability);
-    //let x_min = parseInt(response.x_min);
-    //let y_min = parseInt(response.y_min);
-    //let x_max = parseInt(response.x_max);
-    //let y_max = parseInt(response.y_max);
+    document.getElementById("result").innerHTML = pred;
 }
 
 
